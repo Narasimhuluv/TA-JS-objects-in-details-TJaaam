@@ -39,3 +39,28 @@
 - Check the `fullName` using getter
 
 - Check the `nameContains` method
+
+```js
+class Square {
+  constructor(side) {
+    this.width = 100;
+    this.height = 50;
+  }
+
+  description() {
+    this.total = this.width * this.height;
+    return alert(this.total);
+  }
+
+  calcArea(){
+      return this.total;
+  }
+
+  static isEqual(width,height){
+       this.total = this.width * this.height;
+    return if(this.width )
+  }
+}
+
+let user1 = new Square()
+```

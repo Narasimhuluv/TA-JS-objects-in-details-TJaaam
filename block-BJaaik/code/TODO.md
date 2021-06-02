@@ -70,7 +70,7 @@ class Cricketer extends Player {
 let person1 = new Person("Narasimhulu Vasam", 23, "Male");
 let player1 = new Player("Narasimhulu Vasam", 23, "Male", "Cricket");
 let teacher1 = new Teacher("Narasimhulu Vasam", 23, "Male", "HTML & CSS");
-let artist1 = new Artist("Narasimhulu Vasam", 23, "Male", "Drawing");
+let artist1 = new Artist("Narasimhulu Vasam", 23.5, "Male", "Drawing");
 let cricket1 = new Cricketer(
   "Narasimhulu Vasam",
   23,

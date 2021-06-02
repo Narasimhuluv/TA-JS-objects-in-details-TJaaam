@@ -27,12 +27,47 @@ Getter
 
 - `length`: returns the current length of the stack.
 
+```js
+class Stack {
+  constructor(stack) {
+    this.stack = stack;
+  }
+  push(value) {
+   this.stack =  this.stack.push(value);
+    return this.stack;
+  }
+  pop(value) {
+  this.stack =  this.stack.pop(value);
+    return this.stack;
+  }
+  peek(value,index){
+    this.stack =  this.stack.lastIndex(index)
+      return this.stack;
+  }
+  reverse(arr){
+    this.stack =  this.stack.reverse(arr)
+      return this.stack;
+  }
+  isEmpty(value){
+    this.stack =  return if(value === 0){
+          return true
+      }else{
+          return flase;
+      }
+  }
+  displayStack(value){
+    this.stack =  this.stack.toString(vlaue)
+      return this.stack
+  }
+}
+```
+
 #### Test
 
 ```js
 let myStack = new Stack();
-myStack.push('One');
-myStack.push('Two');
+myStack.push("One");
+myStack.push("Two");
 console.log(myStack.length); // 2
 console.log(myStack.peek()); // "Two"
 console.log(myStack.peek(0)); // "One"
@@ -64,13 +99,33 @@ Getter
 
 - `length`: returns the current length of the stack.
 
+```js
+class queue {
+  constructor(queue) {
+    this.queue = queue;
+  }
+  enqueue(value) {
+    this.stack = this.push(value);
+    return this.stack;
+  }
+  dequeue(value) {
+    this.stack = this.shift(value);
+    return this.stack;
+  }
+  displayQueue(value) {
+    this.stack = this.toString(value);
+    return this.stack;
+  }
+}
+```
+
 #### Test
 
 ```js
 let atmQueue = new Queue();
-atmQueue.enqueue('Aman');
-atmQueue.enqueue('John');
-atmQueue.enqueue('Rohan');
+atmQueue.enqueue("Aman");
+atmQueue.enqueue("John");
+atmQueue.enqueue("Rohan");
 console.log(atmQueue.displayQueue()); // "Aman John Rohan"
 console.log(atmQueue.length); // 3
 console.log(atmQueue.peek()); // "Aman"

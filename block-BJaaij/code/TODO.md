@@ -48,22 +48,28 @@ let book1 = new Book("You can Win", "Motivation", "Shiv Kera");
 
 ```js
 class BookList {
-  constructor(Book, index) {
-    this.Book = Book;
-    this.index = index;
+  constructor() {
+    this.books = [];
+    this.currentIndexBook = 0;
   }
-  add([Book]) {
-    return this.Book.push();
+  add(books = []) {
+    this.books = this.books.concat(books);
+    return this.books;
   }
-  getCurrentBook(index = index + 1) {
-    return index;
+  getCurrentBook() {
+    return this.books[this.currentIndexBook];
   }
-  getPrevBook(index = index - 1) {
-    return index;
+  getNextBook() {
+    this.currentIndexBook = this.currentIndexBook + 1;
+    return this.books[this.currentIndexBook];
   }
-  changeCurrentBook(newIndex) {
-    this.index = newIndex;
-    return this.index;
+  getPrvBook() {
+    this.currentIndexBook = this.currentIndexBook - 1;
+    return this.books[this.currentIndexBook];
+  }
+  changeCurrentBook(Index) {
+    this.currentIndexBook = Index;
+    return this.currentIndexBook;
   }
 }
 

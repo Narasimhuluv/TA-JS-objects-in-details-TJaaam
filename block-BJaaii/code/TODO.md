@@ -29,35 +29,34 @@ Getter
 
 ```js
 class Stack {
-  constructor(stack) {
-    this.stack = stack;
+  constructor() {
+    this.stack = [];
   }
   push(value) {
-   this.stack =  this.stack.push(value);
+    this.stack.push(value);
     return this.stack;
   }
-  pop(value) {
-  this.stack =  this.stack.pop(value);
+  pop() {
+    this.stack.pop();
     return this.stack;
   }
-  peek(value,index){
-    this.stack =  this.stack.lastIndex(index)
-      return this.stack;
+  peek(index = this.stack.length - 1) {
+    this.stack.lastIndex(index);
+    return this.stack[index];
   }
-  reverse(arr){
-    this.stack =  this.stack.reverse(arr)
-      return this.stack;
+  reverse() {
+    this.stack.reverse();
+    return this.stack;
   }
-  isEmpty(value){
-    this.stack =  return if(value === 0){
-          return true
-      }else{
-          return flase;
-      }
+  isEmpty() {
+    return !(this.stack.length > 0);
   }
-  displayStack(value){
-    this.stack =  this.stack.toString(vlaue)
-      return this.stack
+  displayStack() {
+    this.stack.join("");
+    return this.stack;
+  }
+  get leangth() {
+    return this.stack.leangth;
   }
 }
 ```
@@ -101,20 +100,29 @@ Getter
 
 ```js
 class queue {
-  constructor(queue) {
-    this.queue = queue;
+  constructor() {
+    this.queue = [];
   }
-  enqueue(value) {
-    this.stack = this.push(value);
+  enqueue() {
+    this.stack.push(value);
     return this.stack;
   }
-  dequeue(value) {
-    this.stack = this.shift(value);
+  dequeue() {
+    this.stack.shift();
     return this.stack;
+  }
+  peek(index = this.stack.length - 1) {
+    return this.stack[index];
+  }
+  isEmpty() {
+    return !(this.stack.length > 0);
   }
   displayQueue(value) {
-    this.stack = this.toString(value);
+    this.stack.join(value);
     return this.stack;
+  }
+  get length() {
+    return this.stack.length;
   }
 }
 ```

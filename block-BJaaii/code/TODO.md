@@ -99,30 +99,30 @@ Getter
 - `length`: returns the current length of the stack.
 
 ```js
-class queue {
+class Queue {
   constructor() {
     this.queue = [];
   }
-  enqueue() {
-    this.stack.push(value);
-    return this.stack;
+  enqueue(value) {
+    this.queue.push(value);
+    return this.queue;
   }
   dequeue() {
-    this.stack.shift();
-    return this.stack;
+    this.queue.shift();
+    return this.queue;
   }
-  peek(index = this.stack.length - 1) {
-    return this.stack[index];
+  peek(index = this.queue.length - 1) {
+    return this.queue[index];
   }
   isEmpty() {
-    return !(this.stack.length > 0);
+    return !(this.queue.length > 0);
   }
   displayQueue(value) {
-    this.stack.join(value);
-    return this.stack;
+    this.queue.join(value);
+    return this.queue;
   }
   get length() {
-    return this.stack.length;
+    return this.queue.length;
   }
 }
 ```
